@@ -70,7 +70,7 @@ typedef struct {
 	TCG_EVENTTYPE EventType;
 	TPML_DIGEST_VALUES Digests;
 	UINT32 EventSize;
-	UINT8 Event[];
+	UINT8 Event[1];
 } TCG_PCR_EVENT2;
 
 typedef struct {
@@ -90,7 +90,7 @@ typedef struct {
 	TCG_EVENTTYPE EventType;
 	TCG_DIGEST Digest;
 	UINT32 EventSize;
-	UINT8 Event[];
+	UINT8 Event[1];
 } TCG_PCR_EVENT;
 
 union EFI_TCG2_FINAL_EVENTS_TABLE_UNION {
